@@ -1,0 +1,18 @@
+{
+  "uuid": "9151a02e-5cc5-4703-8c18-299482e00317",
+  "shortName": "Tricorder",
+  "longName": "Tricorder",
+  "companyName": "Pebble Technology",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["basalt"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}

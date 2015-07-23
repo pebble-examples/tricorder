@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Tricorder</string>
+
+    <string name="zero">"0"</string>
+    <string name="unknown">"Unknown"</string>
+    <string name="not_applicable">"N/A"</string>
+
+    <!-- Activity Main -->
+    <string name="activity_main_reset_btn">Reset</string>
+    <string name="activity_main_email_logs_btn">Email Logs</string>
+
+    <!-- Overview Page -->
+    <string name="overview_page_header_stats">Stats</string>
+    <string name="overview_page_header_accel_chart">Accel Chart</string>
+    <string name="overview_page_header_connection_chart">Connection Chart</string>
+    <string name="overview_page_header_battery_chart">Battery Chart</string>
+
+    <string name="overview_page_connection_status">"Connection Status"</string>
+    <string name="overview_page_last_packet_id">"Last Packet Id"</string>
+    <string name="overview_page_last_packet_time">"Last Packet Time"</string>
+    <string name="overview_page_crc_mismatches">"CRC Mismatches"</string>
+    <string name="overview_page_duplicate_packets">"Duplicate Packets"</string>
+    <string name="overview_page_out_of_order_packets">"Out of Order Packets"</string>
+    <string name="overview_page_dropped_packets">"Dropped Packets"</string>
+</resources>
