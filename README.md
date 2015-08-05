@@ -1,6 +1,8 @@
 Tricorder
 =========
 
+![](screenshot.png)
+
 > In the fictional Star Trek universe, a tricorder is a multifunction hand-held
 device used for sensor scanning, data analysis, and recording data.
 ***- Wikipedia***
