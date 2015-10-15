@@ -104,9 +104,9 @@ static void init(void) {
 }
 
 static void deinit(void) {
-#ifdef PBL_SDK_2
+#if defined(PBL_SDK_2)
   bluetooth_connection_service_unsubscribe();
-#elif PBL_SDK_3
+#elif defined(PBL_SDK_3)
   connection_service_unsubscribe();
 #endif
   window_destroy(s_window);
