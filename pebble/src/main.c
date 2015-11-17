@@ -86,7 +86,7 @@ static void init(void) {
   app_worker_message_subscribe(worker_message_handler);
 
   s_window = window_create();
-  window_set_background_color(s_window, GColorChromeYellow);
+  window_set_background_color(s_window, PBL_IF_COLOR_ELSE(GColorChromeYellow, GColorBlack));
   window_set_click_config_provider(s_window, click_config_provider);
   window_set_window_handlers(s_window, (WindowHandlers) {
     .load = window_load,
@@ -104,11 +104,7 @@ static void init(void) {
 }
 
 static void deinit(void) {
-#if defined(PBL_SDK_2)
-  bluetooth_connection_service_unsubscribe();
-#elif defined(PBL_SDK_3)
   connection_service_unsubscribe();
-#endif
   window_destroy(s_window);
 }
 
