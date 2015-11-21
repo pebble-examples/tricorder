@@ -2,5 +2,5 @@ platform :ios, '8.0'
 
 use_frameworks!
 
-pod 'PebbleKit'
-pod 'Charts'
+pod 'PebbleKit', '~> 3.0.0'
+pod 'Charts', '2.1.6'
