@@ -64,6 +64,7 @@
 - (IBAction)resetDataButton:(id)sender {
     [Tricorder.sharedTricorder resetData];
     [self.tableView reloadData];
+    [[PBPebbleCentral defaultCentral].dataLoggingService pollForData];
 }
 
 @end
