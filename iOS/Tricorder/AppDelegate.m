@@ -13,17 +13,11 @@
 #import "StatsTableViewController.h"
 #import "Tricorder.h"
 
-static NSUUID *TricoderAppUUID;
-
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
-+ (void)load {
-    TricoderAppUUID = [[NSUUID alloc] initWithUUIDString:@"9151a02e-5cc5-4703-8c18-299482e00317"];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // If you need more logs, uncomment the following line:
@@ -32,7 +26,7 @@ static NSUUID *TricoderAppUUID;
     PBPebbleCentral *central = [PBPebbleCentral defaultCentral];
     central.delegate = self;
     central.appUUID = TricoderAppUUID;
-    central.dataLoggingService.delegate = [Tricorder sharedTricorder];
+    [central dataLoggingServiceForAppUUID:TricoderAppUUID].delegate = [Tricorder sharedTricorder];
     [central run];
     return YES;
 }

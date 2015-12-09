@@ -8,6 +8,7 @@
 
 #import <PebbleKit/PebbleKit.h>
 
+extern NSUUID *TricoderAppUUID;
 extern NSString *const TricorderDataUpdatedNotification;
 
 @interface Tricorder : NSObject <PBDataLoggingServiceDelegate>

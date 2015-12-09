@@ -11,6 +11,8 @@
 #import "AppDelegate.h"
 #import "TricorderData.h"
 
+
+NSUUID *TricoderAppUUID;
 NSString *const TricorderDataUpdatedNotification = @"tricorderUpdated";
 
 @interface Tricorder ()
@@ -20,6 +22,10 @@ NSString *const TricorderDataUpdatedNotification = @"tricorderUpdated";
 @end
 
 @implementation Tricorder
+
++ (void)load {
+    TricoderAppUUID = [[NSUUID alloc] initWithUUIDString:@"9151a02e-5cc5-4703-8c18-299482e00317"];
+}
 
 + (instancetype)sharedTricorder {
     static Tricorder *sharedTricorder = nil;

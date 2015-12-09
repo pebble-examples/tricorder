@@ -64,7 +64,8 @@
 - (IBAction)resetDataButton:(id)sender {
     [Tricorder.sharedTricorder resetData];
     [self.tableView reloadData];
-    [[PBPebbleCentral defaultCentral].dataLoggingService pollForData];
+    PBPebbleCentral *central = [PBPebbleCentral defaultCentral];
+    [[central dataLoggingServiceForAppUUID:TricoderAppUUID] pollForDataFromWatch:central.lastConnectedWatch];
 }
 
 @end
