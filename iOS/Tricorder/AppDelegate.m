@@ -45,6 +45,15 @@
     }
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    // Give us some more time to run and process dataLogging data in the background.
+    // But after 30 seconds we will probably not receive anything anymore.
+    __block UIBackgroundTaskIdentifier identifier = [application beginBackgroundTaskWithName:@"keep-alive" expirationHandler:^{
+        [application endBackgroundTask:identifier];
+        identifier = UIBackgroundTaskInvalid;
+    }];
+}
+
 #pragma mark - Other
 
 - (void)launchPebbleApp {
