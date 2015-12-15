@@ -104,11 +104,7 @@ static void prv_update_data(Tricorder *tricorder) {
 
   tricorder->data->packet_id++;
   time_ms(&tricorder->data->timestamp, &tricorder->data->timestamp_ms);
-#if defined(PBL_SDK_2)
-  tricorder->data->connection_status = bluetooth_connection_service_peek();
-#elif defined(PBL_SDK_3)
   tricorder->data->connection_status = connection_service_peek_pebble_app_connection();
-#endif
   tricorder->data->charge_percent = battery_state_service_peek().charge_percent;
   accel_service_peek(&tricorder->data->accel_data);
   tricorder->data->crc32 = 0;
