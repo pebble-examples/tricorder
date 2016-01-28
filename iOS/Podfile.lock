@@ -1,13 +1,13 @@
 PODS:
-  - Charts (2.1.0)
-  - PebbleKit (2.4)
+  - Charts (2.1.6)
+  - PebbleKit (3.1.0)
 
 DEPENDENCIES:
-  - Charts
-  - PebbleKit
+  - Charts (= 2.1.6)
+  - PebbleKit (~> 3.1.0)
 
 SPEC CHECKSUMS:
-  Charts: 8b677edafaad44c439d67cee0b8eaf7a76f9b4df
-  PebbleKit: e8650801927bd7272da83c8a21fb94d2af24465b
+  Charts: 5e1e5ac23898e5b09d226a2fc3e9d86bc281937e
+  PebbleKit: bd80e2a6916bbfcc6be4716d929597b7538b2858
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.39.0
